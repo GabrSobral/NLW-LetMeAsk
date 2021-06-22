@@ -23,7 +23,7 @@ function AuthProvider({children}: AuthProviderChildren){
   const [ user, setUser ] = useState<User>()
 
   useEffect(()=> {
-    auth.onAuthStateChanged(user => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
       if(user) {
         const { displayName, photoURL, uid} = user
 
@@ -38,6 +38,10 @@ function AuthProvider({children}: AuthProviderChildren){
         })
       }
     })
+
+    return () => {
+      unsubscribe()
+    }
   },[])
 
   async function signInWithGoogle(){
