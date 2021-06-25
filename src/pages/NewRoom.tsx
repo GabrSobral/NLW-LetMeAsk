@@ -4,7 +4,7 @@ import logoImg from '../assets/images/logo.svg'
 
 import { Button } from '../components/Button'
 import "../styles/auth.scss"
-import { useAuth } from '../contexts/AuthContext'
+import { useAuth } from '../hooks/useAuth'
 import { FormEvent } from 'react'
 import { useState } from 'react'
 import { database } from '../services/firebase'

@@ -1,4 +1,4 @@
-import { useState, useContext , useEffect} from 'react'
+import { useState, useEffect} from 'react'
 import { createContext, ReactNode } from 'react'
 import { auth, firebase } from '../services/firebase'
 
@@ -77,8 +77,4 @@ function AuthProvider({children}: AuthProviderChildren){
   )
 }
 
-function useAuth(){
-  return useContext(AuthContext)
-}
-
-export { useAuth, AuthProvider }
+export { AuthProvider, AuthContext }
