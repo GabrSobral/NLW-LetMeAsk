@@ -5,8 +5,9 @@ import { Question } from '../../components/Question'
 import { RoomCode } from '../../components/RoomCode'
 
 import logoImg from '../../assets/images/logo.svg'
+import checkImg from '../../assets/images/check.svg'
+import answerSvg from '../../assets/images/answer.svg'
 import deleteImg from '../../assets/images/delete.svg'
-import { useAuth } from '../../hooks/useAuth'
 import { useRoom } from '../../hooks/useRoom'
 
 import { database } from '../../services/firebase'
@@ -36,6 +37,17 @@ export function AdminRoom(){
 
     push('/')
   }
+  async function handleCheckQuestionAnswered(questionId: string){
+    await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
+      isAnswered: true
+    })
+  }
+  async function handleHighlightQuestion(questionId: string){
+    await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
+      isHighlighted: true
+    })
+  }
+  
 
   return(
     <div id="page-room">
@@ -61,7 +73,27 @@ export function AdminRoom(){
               author={question.author} 
               content={question.content} 
               key={question.id}
+              isAnswered={question.isAnswered}
+              isHighLighted={question.isHighlighted}
             >
+              { !question.isAnswered && (
+                <>
+                  <button 
+                    type="button"
+                    onClick={() => handleCheckQuestionAnswered(question.id)}
+                  >
+                    <img src={checkImg} alt='Marcar pergunta como respondida' />
+                  </button>
+
+                  <button 
+                    type="button"
+                    onClick={() => handleHighlightQuestion(question.id)}
+                  >
+                    <img src={answerSvg} alt='Dar destaque à pergunta' />
+                  </button>
+                </>
+              ) }
+
               <button 
                 type="button"
                 onClick={() => handleDeleteQuestion(question.id)}

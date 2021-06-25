@@ -27,7 +27,7 @@ export function NewRoom(){
       title: newRoom,
       authorId: user?.id,
     })
-    push(`/rooms/${firebaseRoom.key}`)
+    push(`/admin/rooms/${firebaseRoom.key}`)
   }
 
   return(
