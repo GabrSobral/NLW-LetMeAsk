@@ -57,7 +57,7 @@ This is a project developed during the **[Next Level Week](https://nextlevelweek
 
 You can view the project layout through the links below:
 
-- [Layout](https://www.figma.com/file/IhQRtrOZdu3TrvkPYREzOy/PlantManager) 
+- [Layout](https://www.figma.com/file/ZwtWSQ00zUAv7YDBBbSn9c/PlantManager-(Copy)) 
 
 Remembering that you need to have a [Figma](http://figma.com/) account to access it.
 
