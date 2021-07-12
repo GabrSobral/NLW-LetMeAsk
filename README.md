@@ -10,10 +10,6 @@
   <a href="#-license">License</a>
 </p>
 
-<p align="center">
-  <img  src="https://img.shields.io/static/v1?label=license&message=MIT&color=FFFFFF&labelColor=32B768" alt="License">
-</p>
-
 <br>
 
 <p align="center">
@@ -61,11 +57,5 @@ You can view the project layout through the links below:
 
 Remembering that you need to have a [Figma](http://figma.com/) account to access it.
 
-## 📝 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
-
-
----
 
 Made with 💜 by Gabriel Sobral 👋
