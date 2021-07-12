@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Letmeask" src=".github/logo.svg" width="160px">
+  <img alt="Letmeask" src="github/logo.svg" width="160px">
 </p>
 
 <p align="center">
@@ -11,7 +11,7 @@
 </p>
 
 <h1 align="center">
-    <img alt="Letmeask" title="Letmeask" src=".github/cover.svg" />
+    <img alt="Letmeask" title="Letmeask" src="github/Landing.svg" />
 </h1>
 
 <br>
@@ -58,4 +58,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) fi
 
 ---
 
-<p align="center">Made with 💜 by Guilherme Capitão</p>
+<p align="center">Made with 💜 by Gabriel Sobral</p>
